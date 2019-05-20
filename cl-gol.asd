@@ -16,7 +16,8 @@
   :author "Manfred Bergmann"
   :license ""
   :depends-on ("cl-gol"
-               "fiveam")
+               "fiveam"
+               "cl-mock")
   :components ((:module "tests"
                 :components
                 ((:file "game"))))
