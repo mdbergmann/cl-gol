@@ -1,0 +1,13 @@
+* Cl-Gol 
+
+** Usage
+
+** Installation
+
+** Author
+
++ Manfred Bergmann
+
+** Copyright
+
+Copyright (c) 2019 Manfred Bergmann
