@@ -5,7 +5,7 @@
   :depends-on ()
   :components ((:module "src"
                 :components
-                ((:file "main"))))
+                ((:file "game"))))
   :description ""
   :long-description
   #.(read-file-string
@@ -19,7 +19,7 @@
                "fiveam")
   :components ((:module "tests"
                 :components
-                ((:file "main"))))
+                ((:file "game"))))
   :description "Test system for cl-gol"
 
   :perform (test-op (op c) (symbol-call :fiveam :run! c)))
