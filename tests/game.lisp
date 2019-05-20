@@ -1,9 +1,9 @@
-(defpackage :cl-gol/tests/main
-  (:use :cl :fiveam :cl-gol)
+(defpackage :cl-gol/tests/game
+  (:use :cl :fiveam :cl-gol/game)
   (:export #:run!
            #:all-tests
            #:nil))
-(in-package :cl-gol/tests/main)
+(in-package :cl-gol/tests/game)
 
 ;; your test code here
 

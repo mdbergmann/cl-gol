@@ -1,6 +1,6 @@
-(defpackage cl-gol
+(defpackage cl-gol/game
   (:use :cl))
-(in-package :cl-gol)
+(in-package :cl-gol/game)
 
 ;; blah blah blah.
 
