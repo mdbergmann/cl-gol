@@ -3,26 +3,27 @@
   (:export #:run!
            #:all-tests
            #:nil))
+
 (in-package :cl-gol/tests/game)
 
-;; your test code here
-
-(test trivial
-  "Trivial test"
-  (is (= 1 1)))
-
-(test nomock
-  "Test without mock"
-  (is (equal (foo) "Hello")))
-
-(test mocktest
-  "Tests cl-mocks"
-  (with-mocks ()
-    (answer (foo) "World")
-
-    (is (equal (foo) "World"))))
 
 
-(run! 'trivial)
-(run! 'mocktest)
-(run! 'nomock)
+;; (test trivial
+;;   "Trivial test"
+;;   (is (= 1 1)))
+
+;; (test nomock
+;;   "Test without mock"
+;;   (is (equal (foo) "Hello")))
+
+;; (test mocktest
+;;   "Tests cl-mocks"
+;;   (with-mocks ()
+;;     (answer (foo) "World")
+
+;;     (is (equal (foo) "World"))))
+
+
+;; (run! 'trivial)
+;; (run! 'mocktest)
+;; (run! 'nomock)

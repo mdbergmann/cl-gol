@@ -1,9 +1,8 @@
 (defpackage cl-gol/game
   (:use :cl)
-  (:export :foo))
+  (:export :foo)
+  (:nicknames :game))
 (in-package :cl-gol/game)
-
-;; blah blah blah.
 
 (defun foo ()
   "Hello")
