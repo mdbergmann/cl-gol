@@ -16,13 +16,7 @@
   "Tests for next-gen function"
   (with-mocks ()
         ;; general rules
-        (answer (rules:alivep 0 0) 0)
         (answer (rules:alivep 0 1) 0)
-        (answer (rules:alivep 0 2) 0)
-        (answer (rules:alivep 0 3) 1)
-        (answer (rules:alivep 1 0) 0)
-        (answer (rules:alivep 1 1) 0)
-        (answer (rules:alivep 1 2) 1)
         (answer (rules:alivep 1 3) 1)
 
         ;; grid calls
