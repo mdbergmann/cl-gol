@@ -34,23 +34,3 @@
         (is (equalp (game:next-gen *testgrid*) *testgrid_expected*))))
 
 (run! 'next-gen)
-
-;; (test trivial
-;;   "Trivial test"
-;;   (is (= 1 1)))
-
-;; (test nomock
-;;   "Test without mock"
-;;   (is (equal (foo) "Hello")))
-
-;; (test mocktest
-;;   "Tests cl-mocks"
-;;   (with-mocks ()
-;;     (answer (foo) "World")
-
-;;     (is (equal (foo) "World"))))
-
-
-;; (run! 'trivial)
-;; (run! 'mocktest)
-;; (run! 'nomock)

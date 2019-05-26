@@ -14,17 +14,17 @@
          grid)))
 
 (defun new-row (grid row row-index)
-  (let ((col -1))
+  (let ((col-index -1))
     (map 'vector #'(lambda (cell)
-                     (setf col (1+ col))
-                     (format t "col: ~a, " col)
+                     (setf col-index (1+ col-index))
+                     (format t "col: ~a, " col-index)
                      (new-cell cell
-                               col
+                               col-index
                                row-index
                                grid)) row)))
 
-(defun new-cell (cell cell-index row-index grid)
+(defun new-cell (cell col-index row-index grid)
   (rules:alivep cell
                 (grid:neighbour-count grid
-                                      cell-index
+                                      col-index
                                       row-index)))
