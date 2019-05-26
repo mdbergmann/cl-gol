@@ -16,14 +16,15 @@
   "Tests for next-gen function"
   (with-mocks ()
         ;; general rules
+        (answer (rules:alivep 0 0) 0)
         (answer (rules:alivep 0 1) 0)
-        (answer (rules:alivep 1 3) 1)
+        (answer (rules:alivep 1 0) 0)
 
         ;; grid calls
         (answer (grid:neighbour-count *testgrid* 0 0) 1)
         (answer (grid:neighbour-count *testgrid* 0 1) 1)
         (answer (grid:neighbour-count *testgrid* 1 0) 1)
-        (answer (grid:neighbour-count *testgrid* 1 1) 1)
+        (answer (grid:neighbour-count *testgrid* 1 1) 0)
         
         (is (equalp (game:next-gen *testgrid*) *testgrid_expected*))))
 
