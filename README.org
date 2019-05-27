@@ -1,3 +1,9 @@
+* Todos
+
+- add unit tests for grid and rules to make the IT pass
+- add more it tests
+
+
 * Cl-Gol 
 
 ** Usage
