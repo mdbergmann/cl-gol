@@ -6,6 +6,13 @@
 
 (in-package :cl-gol/tests/game)
 
+(run! 'next-gen)
+
+;; the suite
+(def-suite all-tests)
+
+(in-suite all-tests)
+
 ;; grids
 (defvar *testgrid* #(#(0 0)
                      #(0 1)))
@@ -31,5 +38,3 @@
     (is (eql (length (invocations 'rules:alivep)) 4))
     (is (eql (length (invocations 'grid:neighbour-count)) 4))
     ))
-
-(run! 'next-gen)
