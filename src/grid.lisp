@@ -1,8 +1,7 @@
-(defpackage cl-gol/grid
+(defpackage cl-gol/src/grid
   (:use :cl)
-  (:export :neighbour-count)
-  (:nicknames :grid))
+  (:export :neighbour-count))
 
-(in-package :cl-gol/grid)
+(in-package :cl-gol/src/grid)
 
 (defun neighbour-count (grid x y) 0)

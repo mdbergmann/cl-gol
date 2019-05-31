@@ -1,5 +1,5 @@
 (defpackage :cl-gol/tests/game
-  (:use :cl :fiveam :cl-gol/game :cl-gol/grid :cl-gol/rules :cl-mock)
+  (:use :cl :fiveam :cl-mock :cl-gol/src/game)
   (:export #:run!
            #:all-tests
            #:nil))
@@ -8,7 +8,7 @@
 
 (run! 'next-gen)
 
-;; the suite
+
 (def-suite all-tests)
 
 (in-suite all-tests)

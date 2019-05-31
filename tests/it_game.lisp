@@ -1,23 +1,22 @@
 (defpackage :cl-gol/tests/it_game
-  (:use :cl :fiveam :cl-gol/game :cl-mock)
+  (:use :cl :fiveam :cl-mock :cl-gol/src/game)
   (:export #:run!
-           #:all-tests
            #:nil))
 (in-package :cl-gol/tests/it_game)
 
 ;; grids
-(defvar *grid1* ((0 0 0)
-                 (0 1 0)
-                 (0 0 0)))
-(defvar *grid1_expected* ((0 0 0)
-                          (0 0 0)
-                          (0 0 0)))
+(defvar *grid1* #(#(0 0 0)
+                  #(0 1 0)
+                  #(0 0 0)))
+(defvar *grid1_expected* #(#(0 0 0)
+                           #(0 0 0)
+                           #(0 0 0)))
 
 ;; integration tests here
 
 (test sc1
   "Scenario 1"
-  (is (eql (game:next-gen grid1) grid1_expected)))
+  (is (equalp (game:next-gen *grid1*) *grid1_expected*)))
 
 (run! 'sc1)
 

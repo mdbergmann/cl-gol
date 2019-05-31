@@ -2,30 +2,22 @@
   :version "0.1.0"
   :author "Manfred Bergmann"
   :license ""
-  :depends-on ()
-  :components ((:module "src"
-                :components
-                ((:file "game")
-                 (:file "grid")
-                 (:file "rules"))))
+  :class :package-inferred-system
+  :depends-on ("cl-gol/src/game")
   :description ""
   :long-description
   #.(read-file-string
      (subpathname *load-pathname* "README.org"))
-  :in-order-to ((test-op (test-op "cl-gol/tests"))))
+  :in-order-to ((test-op (test-op "cl-gol/tests/game"))))
 
 (defsystem "cl-gol/tests"
-  :author "Manfred Bergmann"
-  :license ""
-  :depends-on ("cl-gol"
-               "fiveam"
-               "cl-mock")
-  :components ((:module "tests"
-                :components
-                ((:file "game"))))
-  :description "Test system for cl-gol"
+  :depends-on ("cl-gol/tests/all")
+  :perform (test-op (op c) (symbol-call :fiveam :run! :all-test))
+  )
 
-  :perform (test-op (op c) (symbol-call :fiveam :run! 'cl-gol/tests/game:all-tests)))
+(register-system-packages "cl-gol/src/game" '(:game))
+(register-system-packages "cl-gol/src/grid" '(:grid))
+(register-system-packages "cl-gol/src/rules" '(:rules))
 
 ;; add to asdf:*central-registry* is not done
 ;; (push #P"~/Development/MySources/cl-gol/" asdf:*central-registry*)
