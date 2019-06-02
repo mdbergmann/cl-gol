@@ -11,11 +11,15 @@
   :in-order-to ((test-op (test-op "cl-gol/tests/game"))))
 
 (defsystem "cl-gol/tests"
-  :depends-on ("cl-gol/tests/all" "fiveam")
+  :depends-on ("fiveam"
+               "cl-gol/tests/all"
+               "cl-gol/tests/it_game"
+               "cl-gol/tests/game")
   ;;  :perform (test-op (op c) (symbol-call :fiveam :run! :test-suite)))
   :perform (test-op (op c) (symbol-call :fiveam
                                         '#:run!
-                                        'cl-gol/tests/all:test-suite)))
+                                        (find-symbol* '#:test-suite
+                                                      :cl-gol/tests/all))))
 
 
 ;;(register-system-packages "cl-gol/tests/all" '(:parent-suite))
