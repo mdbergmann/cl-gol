@@ -1,10 +1,8 @@
 (defpackage :cl-gol/tests/all
-  (:use :cl :fiveam :cl-mock
-   :cl-gol/tests/it_game
-   :cl-gol/tests/game)
-  (:export #:run!
-           #:all-tests
-           #:nil))
+  (:use :cl :fiveam)
+  (:export :test-suite))
 
 (in-package :cl-gol/tests/all)
 
+(def-suite test-suite
+    :description "The parent test suite")

@@ -11,13 +11,17 @@
   :in-order-to ((test-op (test-op "cl-gol/tests/game"))))
 
 (defsystem "cl-gol/tests"
-  :depends-on ("cl-gol/tests/all")
-  :perform (test-op (op c) (symbol-call :fiveam :run! :all-test))
-  )
+  :depends-on ("cl-gol/tests/all" "fiveam")
+  ;;  :perform (test-op (op c) (symbol-call :fiveam :run! :test-suite)))
+  :perform (test-op (op c) (symbol-call :fiveam
+                                        '#:run!
+                                        'cl-gol/tests/all:test-suite)))
 
-(register-system-packages "cl-gol/src/game" '(:game))
-(register-system-packages "cl-gol/src/grid" '(:grid))
-(register-system-packages "cl-gol/src/rules" '(:rules))
+
+;;(register-system-packages "cl-gol/tests/all" '(:parent-suite))
+;;(register-system-packages "cl-gol/src/game" '(:game))
+;;(register-system-packages "cl-gol/src/grid" '(:grid))
+;;(register-system-packages "cl-gol/src/rules" '(:rules))
 
 ;; add to asdf:*central-registry* is not done
 ;; (push #P"~/Development/MySources/cl-gol/" asdf:*central-registry*)

@@ -1,5 +1,6 @@
 (defpackage :cl-gol/tests/it_game
-  (:use :cl :fiveam :cl-mock :cl-gol/src/game)
+  (:use :cl :fiveam :cl-mock
+   :cl-gol/src/game)
   (:export #:run!
            #:nil))
 (in-package :cl-gol/tests/it_game)
@@ -13,6 +14,12 @@
                            #(0 0 0)))
 
 ;; integration tests here
+
+(def-suite integ-tests
+  :description "Integration tests"
+  :in cl-gol/tests/all:test-suite)
+
+(in-suite integ-tests)
 
 (test sc1
   "Scenario 1"

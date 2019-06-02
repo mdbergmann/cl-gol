@@ -9,9 +9,11 @@
 (run! 'next-gen)
 
 
-(def-suite all-tests)
+(def-suite game-tests
+  :description "high level game tests with mocks"
+  :in cl-gol/tests/all:test-suite)
 
-(in-suite all-tests)
+(in-suite game-tests)
 
 ;; grids
 (defvar *testgrid* #(#(0 0)
