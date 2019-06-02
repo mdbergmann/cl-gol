@@ -12,6 +12,12 @@
 (defvar *grid1_expected* #(#(0 0 0)
                            #(0 0 0)
                            #(0 0 0)))
+(defvar *grid2* #(#(0 0 1)
+                  #(0 1 1)
+                  #(0 0 0)))
+(defvar *grid2_expected* #(#(0 1 1)
+                           #(0 1 1)
+                           #(0 0 0)))
 
 ;; integration tests here
 
@@ -25,7 +31,12 @@
   "Scenario 1"
   (is (equalp (game:next-gen *grid1*) *grid1_expected*)))
 
+(test sc2
+  "Scenario 2"
+  (is (equalp (game:next-gen *grid2*) *grid2_expected*)))
+
 (run! 'sc1)
+(run! 'sc2)
 
 ;; (test trivial
 ;;   "Trivial test"
