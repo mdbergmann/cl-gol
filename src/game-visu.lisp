@@ -42,7 +42,7 @@
                    #(0 0 0 0 0 0 0 0 0 0)))
 
 
-(defvar *grid* *blinker*)
+(defvar *grid* #())
 
 (defun make-point (x y)
   (gamekit:vec2 x y))
@@ -55,8 +55,11 @@
   (:act-rate 2))
 
 (defmethod gamekit:draw ((this gol-visu))
-  ;;(format t "drawing...~%")
+  ;(format t "draw...~%")
 
+  (if (= (length *grid*) 0)
+      (setf *grid* *blinker*))
+  
   (let* ((grid-size (length *grid*))
          (cell-size (/ *canvas-grid-size* grid-size)))
     ;;(format t "cell-size:~a~%" cell-size)
@@ -71,4 +74,7 @@
            (- cell-size 1)
            (- cell-size 1)
            :fill-paint fill-col)))))
+
   (setf *grid* (game:next-gen *grid*)))
+
+(defmethod gamekit:act ((this gol-visu)))
