@@ -1,6 +1,7 @@
 (defpackage :cl-gol/tests/grid
   (:use :cl :fiveam :cl-gol/src/grid)
   (:export #:run!
+           #:all-tests
            #:nil))
 
 (in-package :cl-gol/tests/grid)

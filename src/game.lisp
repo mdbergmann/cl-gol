@@ -26,5 +26,5 @@
 (defun new-cell (cell col-index row-index grid)
   (rules:alivep cell
                 (grid:neighbour-count grid
-                                      col-index
-                                      row-index)))
+                                      row-index
+                                      col-index)))

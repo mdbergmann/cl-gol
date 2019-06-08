@@ -12,10 +12,25 @@
 (defvar *grid1_expected* #(#(0 0 0)
                            #(0 0 0)
                            #(0 0 0)))
+
 (defvar *grid2* #(#(0 0 1)
                   #(0 1 1)
                   #(0 0 0)))
 (defvar *grid2_expected* #(#(0 1 1)
+                           #(0 1 1)
+                           #(0 0 0)))
+
+(defvar *grid3* #(#(0 0 0)
+                  #(0 1 1)
+                  #(1 1 1)))
+(defvar *grid3_expected* #(#(0 0 0)
+                           #(1 0 1)
+                           #(1 0 1)))
+
+(defvar *grid4* #(#(0 0 1)
+                  #(0 0 1)
+                  #(0 0 1)))
+(defvar *grid4_expected* #(#(0 0 0)
                            #(0 1 1)
                            #(0 0 0)))
 
@@ -35,25 +50,15 @@
   "Scenario 2"
   (is (equalp (game:next-gen *grid2*) *grid2_expected*)))
 
+(test sc3
+  "Scenario 3"
+  (is (equalp (game:next-gen *grid3*) *grid3_expected*)))
+
+(test sc4
+  "Scenario 4"
+  (is (equalp (game:next-gen *grid4*) *grid4_expected*)))
+
 (run! 'sc1)
 (run! 'sc2)
-
-;; (test trivial
-;;   "Trivial test"
-;;   (is (= 1 1)))
-
-;; (test nomock
-;;   "Test without mock"
-;;   (is (equal (foo) "Hello")))
-
-;; (test mocktest
-;;   "Tests cl-mocks"
-;;   (with-mocks ()
-;;     (answer (foo) "World")
-
-;;     (is (equal (foo) "World"))))
-
-
-;; (run! 'trivial)
-;; (run! 'mocktest)
-;; (run! 'nomock)
+(run! 'sc3)
+(run! 'sc4)
