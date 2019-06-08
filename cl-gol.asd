@@ -3,7 +3,7 @@
   :author "Manfred Bergmann"
   :license ""
   :class :package-inferred-system
-  :depends-on ("cl-gol/src/game")
+  :depends-on ("cl-gol/src/game" "cl-gol/src/game-visu")
   :description ""
   :long-description
   #.(read-file-string

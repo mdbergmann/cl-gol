@@ -17,7 +17,7 @@
   (let ((col-index -1))
     (map 'vector #'(lambda (cell)
                      (incf col-index)
-                     (format t "col: ~a, " col-index)
+                     ;(format t "col: ~a, " col-index)
                      (new-cell cell
                                col-index
                                row-index
