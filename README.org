@@ -1,19 +1,4 @@
 * Todos
 
-- add unit tests for grid and rules to make the IT pass
-- add more it tests
+- build visualization based in trivial-gamekit
 
-
-* Cl-Gol 
-
-** Usage
-
-** Installation
-
-** Author
-
-+ Manfred Bergmann
-
-** Copyright
-
-Copyright (c) 2019 Manfred Bergmann
