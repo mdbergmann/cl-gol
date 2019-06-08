@@ -14,8 +14,10 @@
   :depends-on ("fiveam"
                "cl-gol/tests/all"
                "cl-gol/tests/it_game"
-               "cl-gol/tests/game")
-  ;;  :perform (test-op (op c) (symbol-call :fiveam :run! :test-suite)))
+               "cl-gol/tests/game"
+               "cl-gol/tests/grid"
+               "cl-gol/tests/rules")
+
   :perform (test-op (op c) (symbol-call :fiveam
                                         '#:run!
                                         (find-symbol* '#:test-suite
