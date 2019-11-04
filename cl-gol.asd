@@ -13,7 +13,7 @@
 (defsystem "cl-gol/tests"
   :depends-on ("fiveam"
                "cl-gol/tests/all"
-               "cl-gol/tests/it_game"
+               "cl-gol/tests/it-game"
                "cl-gol/tests/game"
                "cl-gol/tests/grid"
                "cl-gol/tests/rules")
