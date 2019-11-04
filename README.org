@@ -1,4 +1,4 @@
 * Todos
 
-- build visualization based in trivial-gamekit
+- DONE build visualization based in trivial-gamekit
 
