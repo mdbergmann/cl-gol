@@ -63,7 +63,7 @@
         (let* ((x (* cell-size row))
                (y (* cell-size col))
                (cell (aref (aref *grid* row) col))
-               (fill-col (if (= cell 0) *white* *blue*)))
+               (fill-col (if (= cell 0) *white* *black*)))
           (gamekit:draw-rect (make-point (+ x 1) (+ y 1))
                              (- cell-size 1)
                              (- cell-size 1)
