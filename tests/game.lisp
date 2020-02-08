@@ -1,8 +1,8 @@
 (defpackage :cl-gol/tests/game
   (:use :cl :fiveam :cl-mock :cl-gol/src/game)
-  (:export #:run!
-           #:all-tests
-           #:nil))
+  (:export :run!
+           :all-tests
+           :nil))
 
 (in-package :cl-gol/tests/game)
 
